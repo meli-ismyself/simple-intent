@@ -1,4 +1,5 @@
 package com.meliismyself.app.sample_intent;
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
@@ -34,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Sub2Activity.class);
-                intent.putExtra(Sub2Activity.KEY_DATA, "Training Aplikasi Android");
+                intent.putExtra(Sub2Activity.KEY_DATA, "Membuat Aplikasi dengan Android Studio Bagian I");
                 startActivityForResult(intent, 0);
             }
         });
@@ -42,8 +43,12 @@ public class MainActivity extends ActionBarActivity {
         btnDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:082121212093"));
-                startActivity(intent);
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                //intent.putExtra(Intent.EXTRA_EMAIL, "info@dicoding.com");
+                //intent.putExtra(Intent.EXTRA_SUBJECT, "Thanks Dicoding");
+                intent.putExtra(Intent.EXTRA_TEXT, "Teman-teman, yuk belajar Membuat Aplikasi dengan Android Studio Bagian I. Kunjungi aja ke https://www.dicoding.com/academies/2");
+                startActivity(Intent.createChooser(intent, "Send Email"));
             }
         });
     }

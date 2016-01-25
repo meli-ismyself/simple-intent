@@ -9,19 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_activity_sub_1"
-        android:text="Ke Activity Sub 1"
+        android:text="Show Teacher"
         android:layout_marginBottom="8dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_activity_sub_2"
-        android:text="Ke Activity Sub 2"
+        android:text="Lesson"
         android:layout_marginBottom="8dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_activity_dial"
-        android:text="Ke Activity Dial"
+        android:text="Share"
         android:layout_marginBottom="8dp"/>
 
 </LinearLayout>
